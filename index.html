@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SABER TOOLS - الرئيسية</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- شريط التنقل العلوي -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <div class="logo">
+                <i class="fas fa-tools"></i>
+                <h1>SABER TOOLS</h1>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#" class="nav-link active" data-page="home">
+                    <i class="fas fa-home"></i> الرئيسية
+                </a>
+                <a href="#" class="nav-link" data-page="sites">
+                    <i class="fas fa-globe"></i> المواقع
+                </a>
+                <a href="#" class="nav-link" data-page="apps">
+                    <i class="fas fa-mobile-alt"></i> التطبيقات
+                </a>
+                <a href="#" class="nav-link" data-page="files">
+                    <i class="fas fa-folder"></i> الملفات
+                </a>
+                <a href="#" class="nav-link" data-page="music">
+                    <i class="fas fa-music"></i> الموسيقى
+                </a>
+            </div>
+        </div>
+        
+        <div class="nav-right">
+            <!-- زر VIP -->
+            <button class="btn-vip" id="vip-btn">
+                <i class="fas fa-crown"></i> VIP
+            </button>
+            
+            <!-- ملف تعريف المستخدم -->
+            <div class="user-profile" id="user-profile">
+                <div class="user-avatar">
+                    <img src="images/default-avatar.png" alt="صورة المستخدم" id="user-avatar">
+                    <span class="user-status"></span>
+                </div>
+                <div class="user-info">
+                    <span class="user-name" id="user-name">مستخدم</span>
+                    <span class="user-plan" id="user-plan">مجاني</span>
+                </div>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- القائمة المنسدلة للمستخدم -->
+    <div class="user-dropdown" id="user-dropdown">
+        <div class="dropdown-header">
+            <div class="dropdown-avatar">
+                <img src="images/default-avatar.png" alt="صورة المستخدم" id="dropdown-avatar">
+            </div>
+            <div class="dropdown-user-info">
+                <h3 id="dropdown-name">مستخدم</h3>
+                <p id="dropdown-email">user@example.com</p>
+                <div class="user-stats">
+                    <div class="stat">
+                        <span class="stat-value" id="user-days">0</span>
+                        <span class="stat-label">أيام متبقية</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" id="user-type">مجاني</span>
+                        <span class="stat-label">الحالة</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown-menu">
+            <a href="#" class="dropdown-item" id="profile-settings">
+                <i class="fas fa-user-cog"></i> إعدادات الملف الشخصي
+            </a>
+            <a href="#" class="dropdown-item" id="vip-management">
+                <i class="fas fa-crown"></i> إدارة VIP
+            </a>
+            <a href="#" class="dropdown-item" id="change-password">
+                <i class="fas fa-key"></i> تغيير كلمة المرور
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#" class="dropdown-item" id="logout-btn">
+                <i class="fas fa-sign-out-alt"></i> تسجيل الخروج
+            </a>
+        </div>
+    </div>
+    
+    <!-- المحتوى الرئيسي -->
+    <main class="main-content" id="main-content">
+        <!-- الصفحة الرئيسية -->
+        <section class="page active" id="home-page">
+            <div class="welcome-banner">
+                <h2>مرحباً بك في <span class="highlight">SABER TOOLS</span></h2>
+                <p>منصة متكاملة تقدم لك أفضل المواقع والتطبيقات والملفات والموسيقى في مكان واحد</p>
+                <div class="stats">
+                    <div class="stat-card">
+                        <i class="fas fa-globe"></i>
+                        <div>
+                            <h3>150+</h3>
+                            <p>موقع ويب</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <div>
+                            <h3>80+</h3>
+                            <p>تطبيق</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-file"></i>
+                        <div>
+                            <h3>500+</h3>
+                            <p>ملف</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <i class="fas fa-music"></i>
+                        <div>
+                            <h3>1000+</h3>
+                            <p>أغنية</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quick-access">
+                <h3><i class="fas fa-bolt"></i> وصول سريع</h3>
+                <div class="quick-links">
+                    <a href="#" class="quick-link" data-page="sites">
+                        <i class="fas fa-globe"></i>
+                        <span>استعراض المواقع</span>
+                    </a>
+                    <a href="#" class="quick-link" data-page="apps">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span>التطبيقات المميزة</span>
+                    </a>
+                    <a href="#" class="quick-link" data-page="files">
+                        <i class="fas fa-folder-open"></i>
+                        <span>الملفات الجديدة</span>
+                    </a>
+                    <a href="#" class="quick-link" data-page="music">
+                        <i class="fas fa-headphones"></i>
+                        <span>تشغيل الموسيقى</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="recent-content">
+                <div class="section-header">
+                    <h3><i class="fas fa-history"></i> المحتوى المضاف حديثاً</h3>
+                    <a href="#" class="view-all">عرض الكل</a>
+                </div>
+                <div class="content-grid" id="recent-grid">
+                    <!-- سيتم ملؤه ديناميكياً -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- صفحة المواقع -->
+        <section class="page" id="sites-page">
+            <div class="page-header">
+                <h2><i class="fas fa-globe"></i> المكتبة الشاملة للمواقع</h2>
+                <p>اكتشف مجموعة واسعة من المواقع المميزة والمفيدة في مختلف المجالات</p>
+            </div>
+            
+            <div class="filter-section">
+                <div class="filter-tags">
+                    <button class="filter-tag active" data-category="all">الكل</button>
+                    <button class="filter-tag" data-category="design">تصميم</button>
+                    <button class="filter-tag" data-category="development">برمجة</button>
+                    <button class="filter-tag" data-category="business">أعمال</button>
+                    <button class="filter-tag" data-category="education">تعليم</button>
+                    <button class="filter-tag" data-category="entertainment">ترفيه</button>
+                </div>
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="site-search" placeholder="ابحث عن موقع...">
+                </div>
+            </div>
+            
+            <div class="content-grid" id="sites-grid">
+                <!-- سيتم ملؤه ديناميكياً -->
+            </div>
+        </section>
+        
+        <!-- صفحة التطبيقات -->
+        <section class="page" id="apps-page">
+            <div class="page-header">
+                <h2><i class="fas fa-mobile-alt"></i> مكتبة التطبيقات المميزة</h2>
+                <p>تطبيقات مفيدة لأجهزة Android و iOS ونظام Windows</p>
+            </div>
+            
+            <div class="apps-container">
+                <div class="apps-categories">
+                    <div class="category active" data-os="all">
+                        <i class="fas fa-th"></i>
+                        <span>الكل</span>
+                    </div>
+                    <div class="category" data-os="android">
+                        <i class="fab fa-android"></i>
+                        <span>Android</span>
+                    </div>
+                    <div class="category" data-os="ios">
+                        <i class="fab fa-apple"></i>
+                        <span>iOS</span>
+                    </div>
+                    <div class="category" data-os="windows">
+                        <i class="fab fa-windows"></i>
+                        <span>Windows</span>
+                    </div>
+                </div>
+                
+                <div class="content-grid" id="apps-grid">
+                    <!-- سيتم ملؤه ديناميكياً -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- صفحة الملفات -->
+        <section class="page" id="files-page">
+            <div class="page-header">
+                <h2><i class="fas fa-folder"></i> الأرشيف الشامل للملفات</h2>
+                <p>ملفات متنوعة للتحميل في مختلف التخصصات والمجالات</p>
+            </div>
+            
+            <div class="files-controls">
+                <div class="file-types">
+                    <button class="file-type-btn active" data-type="all">الكل</button>
+                    <button class="file-type-btn" data-type="pdf">PDF</button>
+                    <button class="file-type-btn" data-type="zip">ZIP</button>
+                    <button class="file-type-btn" data-type="doc">مستندات</button>
+                    <button class="file-type-btn" data-type="image">صور</button>
+                    <button class="file-type-btn" data-type="video">فيديو</button>
+                </div>
+                <div class="upload-section">
+                    <button class="btn-upload" id="upload-btn">
+                        <i class="fas fa-cloud-upload-alt"></i> رفع ملف
+                    </button>
+                </div>
+            </div>
+            
+            <div class="files-grid" id="files-grid">
+                <!-- سيتم ملؤه ديناميكياً -->
+            </div>
+        </section>
+        
+        <!-- صفحة الموسيقى -->
+        <section class="page" id="music-page">
+            <div class="music-header">
+                <h2><i class="fas fa-music"></i> مشغل الموسيقى</h2>
+                <p>استمع إلى مجموعة متنوعة من الأغاني والموسيقى</p>
+            </div>
+            
+            <div class="music-container">
+                <div class="player-section">
+                    <div class="now-playing">
+                        <div class="album-art">
+                            <img src="images/default-album.jpg" alt="غلاف الألبوم" id="album-art">
+                            <div class="vinyl"></div>
+                        </div>
+                        <div class="song-info">
+                            <h3 id="song-title">لم يتم اختيار أغنية</h3>
+                            <p id="song-artist">فنان</p>
+                            <p id="song-album">ألبوم</p>
+                            <div class="progress-container">
+                                <span id="current-time">0:00</span>
+                                <div class="progress-bar">
+                                    <div class="progress" id="music-progress"></div>
+                                </div>
+                                <span id="duration">0:00</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="player-controls">
+                        <button class="control-btn" id="shuffle-btn">
+                            <i class="fas fa-random"></i>
+                        </button>
+                        <button class="control-btn" id="prev-btn">
+                            <i class="fas fa-step-backward"></i>
+                        </button>
+                        <button class="control-btn play-btn" id="play-btn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="control-btn" id="next-btn">
+                            <i class="fas fa-step-forward"></i>
+                        </button>
+                        <button class="control-btn" id="repeat-btn">
+                            <i class="fas fa-redo"></i>
+                        </button>
+                        
+                        <div class="volume-control">
+                            <i class="fas fa-volume-up" id="volume-icon"></i>
+                            <div class="volume-bar">
+                                <div class="volume-level" id="volume-level"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="playlist-section">
+                    <div class="playlist-header">
+                        <h4><i class="fas fa-list"></i> قائمة التشغيل</h4>
+                        <div class="playlist-actions">
+                            <button class="playlist-action" id="create-playlist">
+                                <i class="fas fa-plus"></i> قائمة جديدة
+                            </button>
+                            <button class="playlist-action" id="search-music">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="playlist-container">
+                        <ul class="playlist" id="playlist">
+                            <!-- سيتم ملؤه ديناميكياً -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- نافذة VIP -->
+        <div class="modal-overlay" id="vip-modal">
+            <div class="modal-container vip-modal">
+                <div class="modal-header">
+                    <h2><i class="fas fa-crown"></i> عضوية VIP</h2>
+                    <button class="modal-close" id="close-vip">&times;</button>
+                </div>
+                
+                <div class="modal-body">
+                    <div class="vip-status" id="vip-status">
+                        <!-- سيتم تحديثه ديناميكياً -->
+                    </div>
+                    
+                    <div class="vip-features">
+                        <h3><i class="fas fa-star"></i> ميزات VIP</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> الوصول إلى جميع المواقع المميزة</li>
+                            <li><i class="fas fa-check-circle"></i> تحميل التطبيقات المدفوعة مجاناً</li>
+                            <li><i class="fas fa-check-circle"></i> الوصول إلى الأرشيف الكامل للملفات</li>
+                            <li><i class="fas fa-check-circle"></i> تشغيل الموسيقى بدون إعلانات</li>
+                            <li><i class="fas fa-check-circle"></i> سرعة تحميل أعلى</li>
+                            <li><i class="fas fa-check-circle"></i> دعم فني متميز</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="vip-activation" id="vip-activation-section">
+                        <h3><i class="fas fa-key"></i> تفعيل كود VIP</h3>
+                        <p>أدخل الكود الخاص بك لتفعيل عضوية VIP لمدة 10 أيام</p>
+                        <div class="code-input">
+                            <input type="text" id="vip-code" placeholder="أدخل كود VIP" maxlength="16">
+                            <button class="btn-activate" id="activate-vip">
+                                <i class="fas fa-bolt"></i> تفعيل
+                            </button>
+                        </div>
+                        <p class="note">يمكنك الحصول على كود VIP من <a href="#" id="vip-codes-link">هنا</a></p>
+                        <div class="activation-result" id="activation-result"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- نافذة الملف الشخصي -->
+        <div class="modal-overlay" id="profile-modal">
+            <div class="modal-container">
+                <!-- محتوى الملف الشخصي -->
+            </div>
+        </div>
+    </main>
+    
+    <!-- مشغل الموسيقى المصغر -->
+    <div class="mini-player" id="mini-player">
+        <div class="mini-info">
+            <img src="images/default-album.jpg" alt="غلاف" id="mini-album">
+            <div>
+                <h4 id="mini-title">لم يتم اختيار أغنية</h4>
+                <p id="mini-artist">فنان</p>
+            </div>
+        </div>
+        <div class="mini-controls">
+            <button class="mini-control" id="mini-prev">
+                <i class="fas fa-step-backward"></i>
+            </button>
+            <button class="mini-control" id="mini-play">
+                <i class="fas fa-play"></i>
+            </button>
+            <button class="mini-control" id="mini-next">
+                <i class="fas fa-step-forward"></i>
+            </button>
+        </div>
+        <div class="mini-progress">
+            <div class="mini-progress-bar" id="mini-progress"></div>
+        </div>
+        <button class="mini-expand" id="expand-player">
+            <i class="fas fa-expand"></i>
+        </button>
+    </div>
+    
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>SABER TOOLS</h4>
+                <p>منصة متكاملة تقدم أفضل المواقع والتطبيقات والملفات والموسيقى في مكان واحد.</p>
+                <p class="copyright">copy right by saber</p>
+            </div>
+            <div class="footer-section">
+                <h4>روابط سريعة</h4>
+                <a href="#" data-page="home">الرئيسية</a>
+                <a href="#" data-page="sites">المواقع</a>
+                <a href="#" data-page="apps">التطبيقات</a>
+                <a href="#" data-page="files">الملفات</a>
+            </div>
+            <div class="footer-section">
+                <h4>الدعم</h4>
+                <a href="#" id="contact-support">اتصل بنا</a>
+                <a href="#" id="faq-link">الأسئلة الشائعة</a>
+                <a href="#" id="terms-link">شروط الاستخدام</a>
+                <a href="#" id="privacy-link">سياسة الخصوصية</a>
+            </div>
+            <div class="footer-section">
+                <h4>تابعنا</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="footer-year"></span> SABER TOOLS. جميع الحقوق محفوظة.</p>
+            <p class="version">الإصدار 2.1.0</p>
+        </div>
+    </footer>
+    
+    <!-- الرسائل العائمة -->
+    <div class="notification-container" id="notification-container"></div>
+    
+    <!-- أكواد JavaScript -->
+    <script src="js/auth.js"></script>
+    <script src="js/music.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

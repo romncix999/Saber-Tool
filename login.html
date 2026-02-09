@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SABER TOOLS - تسجيل الدخول</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <div class="login-container">
+        <header class="login-header">
+            <div class="logo">
+                <i class="fas fa-tools"></i>
+                <h1>SABER TOOLS</h1>
+            </div>
+            <p class="copyright">copy right by saber</p>
+        </header>
+        
+        <main class="login-main">
+            <div class="welcome-section">
+                <h2>مرحباً بك في SABER TOOLS</h2>
+                <p>منصة متكاملة للمواقع والتطبيقات والملفات والموسيقى</p>
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-globe"></i>
+                        <span>مواقع ويب مميزة</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-music"></i>
+                        <span>مشغل موسيقى متكامل</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-crown"></i>
+                        <span>خدمات VIP حصرية</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>بيئة آمنة ومحمية</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="auth-forms">
+                <div class="form-container">
+                    <div class="form-tabs">
+                        <button class="tab-btn active" id="login-tab">تسجيل الدخول</button>
+                        <button class="tab-btn" id="register-tab">إنشاء حساب جديد</button>
+                    </div>
+                    
+                    <form id="login-form" class="auth-form active">
+                        <div class="form-group">
+                            <label for="login-email"><i class="fas fa-envelope"></i> البريد الإلكتروني</label>
+                            <input type="email" id="login-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="login-password"><i class="fas fa-lock"></i> كلمة المرور</label>
+                            <input type="password" id="login-password" required>
+                        </div>
+                        <div class="form-options">
+                            <label class="remember">
+                                <input type="checkbox" id="remember-me">
+                                <span>تذكرني لمدة شهر</span>
+                            </label>
+                            <a href="#" class="forgot-password">نسيت كلمة المرور؟</a>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-sign-in-alt"></i> تسجيل الدخول
+                        </button>
+                    </form>
+                    
+                    <form id="register-form" class="auth-form">
+                        <div class="form-group">
+                            <label for="register-name"><i class="fas fa-user"></i> الاسم الكامل</label>
+                            <input type="text" id="register-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-email"><i class="fas fa-envelope"></i> البريد الإلكتروني</label>
+                            <input type="email" id="register-email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="register-password"><i class="fas fa-lock"></i> كلمة المرور</label>
+                            <input type="password" id="register-password" required minlength="6">
+                        </div>
+                        <div class="form-group">
+                            <label for="register-confirm"><i class="fas fa-lock"></i> تأكيد كلمة المرور</label>
+                            <input type="password" id="register-confirm" required minlength="6">
+                        </div>
+                        <div class="terms">
+                            <input type="checkbox" id="accept-terms" required>
+                            <label for="accept-terms">أوافق على <a href="#">شروط الاستخدام</a> و <a href="#">سياسة الخصوصية</a></label>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-user-plus"></i> إنشاء حساب
+                        </button>
+                    </form>
+                    
+                    <div class="auth-message" id="auth-message"></div>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="login-footer">
+            <p>جميع الحقوق محفوظة &copy; <span id="current-year"></span> SABER TOOLS</p>
+            <p class="version">الإصدار 2.1.0</p>
+        </footer>
+    </div>
+    
+    <script src="js/auth.js"></script>
+</body>
+</html>
